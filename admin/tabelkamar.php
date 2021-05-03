@@ -6,8 +6,8 @@
 <tr> 
 <th>No</th>
 <th>No Kamar</th>
-<th>Jenis</th>
-<th>Tempat Type</th>
+<th>Nama Kamar</th>
+<th>Type Bed</th>
 <th>Tarif</th>
 <th>Aksi</th>
 </tr>
@@ -39,4 +39,4 @@ while($row=mysqli_fetch_array($sql)){
 $no++;
 }
 ?>
-</table> 
+</table>

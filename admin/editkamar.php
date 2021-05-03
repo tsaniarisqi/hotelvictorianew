@@ -19,26 +19,14 @@ $data=mysqli_fetch_array($sql);
                 <td> <input type="text" name="No_Kamar" id="" value="<?php echo $data['No_Kamar']?>"> </td>
             </tr>
 			<tr style="color: black;">
-                <td>Jenis Kamar</td>
+                <td>Nama Kamar</td>
                 <td>:</td>
-                <td><select name="Jenis" id="Jenis"> 
-				<option value="">-pilih-</option>
-				<option value="Super Presidents">Super Presidents</option>
-				<option value="Super VIP">Super VIP</option>
-				<option value="VIP">VIP</option>
-				<option value="Deluxe">Deluxe</option>
-				<option value="Superior">Superior</option>
-				<option value="Standard">Standard</option>
-				<option value="Ekonomi-1">Ekonomi Class 1</option>
-				<option value="Ekonomi-2">Ekonomi Class 2</option>
-			</tr>
+                <td> <input type="text" name="Jenis" id="" value="<?php echo $data['Jenis']?>"> </td>
+            </tr>
 			<tr style="color: black;">
-                <td>Type</td>
+                <td>Tipe Bed</td>
                 <td>:</td>
-                <td><select name="Type" id="Type"> 
-				<option value="">-pilih-</option>
-				<option value="Single">Single</option>
-				<option value="Double">Double</option>
+                <td> <input type="text" name="Type" id="" value="<?php echo $data['Type']?>"> </td>
             </tr>
 			<tr style="color: black;">
                 <td>Tarif</td>
@@ -48,8 +36,8 @@ $data=mysqli_fetch_array($sql);
                 <td></td>
                 <td></td>
                 <td> 
-				<input type="submit" name="submit" id="" value="SIMPAN" class="btn btn-success">
-                <input type="reset" name="reset" id=""   value="RESET" class="btn btn-danger"> 
+				<input type="submit" name="submit" id="" class="btn btn-success" value="SIMPAN">
+                <input type="reset" name="reset" id="" class="btn btn-danger" value="RESET"> 
 				
 				</td>
             </tr>
@@ -64,15 +52,15 @@ $data=mysqli_fetch_array($sql);
         $Type= $_POST['Type'];
         $Tarif= $_POST['Tarif'];
 
-        $q = mysqli_query($con, "UPDATE kamar set No_Kamar='$_POST[No_Kamar]',Jenis='$_POST[Jenis]',Type='$_POST[Type]',Tarif='$_POST[Tarif]' where No_Kamar='$_POST[No_Kamar]'");
+        $q = mysqli_query($con, "UPDATE kamar SET No_Kamar='$_POST[No_Kamar]',Jenis='$_POST[Jenis]',Type='$_POST[Type]',Tarif='$_POST[Tarif]' where No_Kamar='$_POST[No_Kamar]'");
 	
 		
         if ($q) {
             echo "<script>alert('Data Berhasil Di simpan');
-			window.location.href'index.php?module=tabelkamar';</script>";
+			window.location.href='index.php?module=tabelkamar';</script>";
          }else {
             echo "<script>alert('Data Gagal Disimpan!');
-			window.location.href'index.php?module=tabelkamar';</script>";
+			window.location.href='index.php?module=tabelkamar';</script>";
         }
     }
 

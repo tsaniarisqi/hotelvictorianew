@@ -13,24 +13,14 @@
                 <td> <input type="text" name="No_Kamar" id=""> </td>
             </tr>
 			<tr style="color: black;">
-                <td>Jenis Kamar</td>
+                <td>Nama Kamar</td>
                 <td>:</td>
-                <td><select name="Jenis" id="Jenis"> 
-				<option value="">-pilih-</option>
-				<option value="Super Presidents">Super Presidents</option>
-				<option value="Super VIP">Super VIP</option>
-				<option value="VIP">VIP</option>
-				<option value="Deluxe">Deluxe</option>
-				<option value="Standard Room">Standard Room</option>
-				<option value="Family Room">Family Room</option>
-			</tr>
+                <td> <input type="text" name="Jenis" id=""> </td>
+            </tr>
 			<tr style="color: black;">
-                <td>Type</td>
+                <td>Tipe Bed</td>
                 <td>:</td>
-                <td><select name="Type" id="Type"> 
-				<option value="">-pilih-</option>
-				<option value="Single">Single</option>
-				<option value="Double">Double</option>
+                <td> <input type="text" name="Type" id=""> </td>
             </tr>
 			<tr style="color: black;">
                 <td>Tarif</td>
