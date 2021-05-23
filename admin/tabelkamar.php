@@ -48,13 +48,15 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <?php  
-                                                include "koneksi.php";
-                                                $sql = mysqli_query($con,"select * from kamar");
-                                                $no=1;
-                                                while($row=mysqli_fetch_array($sql)){
+                                        <?php  
+                                            include "koneksi.php";
+                                            $sql = mysqli_query($con,"select * from kamar");
+                                            $no=1;
+                                            while($row=mysqli_fetch_array($sql)){
 
                                             ?>
+
+                                            
                                             <td align="center"><?php echo $no; ?></td>
                                             <td align="center"><?php echo $row['No_Kamar'] ?> </td>
                                             <td align="center"><?php echo $row['Jenis'] ?> </td>
