@@ -1,26 +1,37 @@
-<div class="site-blocks-cover overlay" style="background-image: url(images/mercure0.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
-	<div class="container">
-		<div class="row align-items-center justify-content-center">
-			<div class="col-md-7 text-center" data-aos="fade">
-				<span class="caption mb-3">Silahkan Login</span>
-				<h1 class="mb-4">Login</h1>
-			</div>
-		</div>
-	</div>
-</div>
-<title> Halaman Login </title>
-<link href="css/bootstrap.min.css" rel="stylesheet">
-</head>
+<!DOCTYPE html>
+<html lang="en">
+
+<?php include 'head.php';?>
 
 <body>
-	<div class="container">
-		<div class="row text-center">
-			<div class="col-md-12">
-			<br/><br/>
-			<h2> HALAMAN LOGIN</h2>
-			</div>
-		</div>
-	</div>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Begin -->
+    
+    <!-- Offcanvas Menu End -->
+
+    <!-- Header Section Begin -->
+    <?php include 'header.php';?>
+    <!-- Header Section End -->
+    <!-- Breadcrumb Begin -->
+    <div class="breadcrumb-option set-bg" data-setbg="img/breadcrumb-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb__text">
+                        <h1>Login Form</h1>
+                        <div class="breadcrumb__links">
+                            <a href="./index.php">Home</a>
+                            <span>Login</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 <?php 
 include 'koneksi.php';
 //menangkap data yang dikirim dari form login
@@ -64,30 +75,53 @@ if(isset($_POST["submit"])){//jika tombol login di klik
 	}
 }
 ?>
-	<div class="row">
+	 <!-- Breadcrumb End -->
+	 <div id="booking" class="section">
+        <div class="section-center">
+            <div class="container">
+                <div class="row">
+                    <div class="card" style="margin-left: 400px; margin-right: 100px; margin-top: 50px;">
+                        <div class="booking-form">
+                            <form action="" method="POST" enctype="multipart/form-data" style="margin-left: 100px; margin-right: 100px; margin-top: 60px; margin-bottom: 60px;">
+                                <h3 class="form-label">Login</h3><br>
+                                <div class="row form-group">
+						<div class="col-md-12">
+							<label class="font-weight-bold" for="username">Username</label>
+							<input type="text" id="username" name="username" class="form-control" placeholder="username">
+						</div>
+					</div>
+					<div class="row form-group">
+						<div class="col-md-12 mb-3 mb-md-0">
+							<label class="font-weight-bold" for="pasword">Pasword</label>
+							<input type="text" id="pasword" name="password" class="form-control" placeholder="pasword">
+						</div>
+					</div>
 
-		<div class="col-md-4 offset-md-4 col-sm-6">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<strong> Masukan Username Dan Password </strong>
-				</div>
-		<div class="panel-body">
+                                <div class="form-btn">
+                                <button type="submit" name="submit"class="btn btn-primary"> Login </button>
+                                </div>
 
-		 <form action="" method="POST" enctype="multipart/form-data">
-		 <br/>
-			<div class="form-group input-group">
-				<span class="input-group-addon"><i class="fa fa-tag"></i></span>
-				<input type="text" name="username" class="form-control" placeholder="your username"/>
-			</div>
-			<div class="form-group input-group">
-				<span class="input-group-addon"><i class="fa fa-lock"></i></span>
-				<input type="password" name="password" class="form-control" placeholder="your password"/>
-			</div>
-			<button type="submit" name="submit"class="btn btn-primary"> LOGIN </button>
-		</form>
-		</div>
-	</div>
-</div>
-</div>
-</div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- This templates was made by Colorlib (https://colorlib.com) -->
+    <!-- Footer Section Begin -->
+    <?php include 'footer.php';?>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
+</html>

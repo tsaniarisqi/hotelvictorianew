@@ -1,12 +1,38 @@
-<div class="site-blocks-cover overlay" style="background-image: url(images/mercure0.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
-	<div class="container">
-		<div class="row align-items-center justify-content-center">
-			<div class="col-md-7 text-center" data-aos="fade">
-				<span class="caption mb-3">Silahkan registrasi pada form Dibawah ini!!!</span>
-				<h1 class="mb-4">Registrasi</h1>
-			</div>
-		</div>
-	</div>
+<?php include 'koneksi.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<?php include 'head.php';?>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Begin -->
+    
+    <!-- Offcanvas Menu End -->
+
+    <!-- Header Section Begin -->
+    <?php include 'header.php';?>
+    <!-- Header Section End -->
+    <!-- Breadcrumb Begin -->
+    <div class="breadcrumb-option set-bg" data-setbg="img/breadcrumb-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb__text">
+                        <h1>Register Form</h1>
+                        <div class="breadcrumb__links">
+                            <a href="./index.html">Home</a>
+                            <span>Register</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <div class="site-section site-section-sm">
 	<div class="container">
@@ -69,3 +95,20 @@
 		</div>
 	</div>
 </div>
+
+    <!-- This templates was made by Colorlib (https://colorlib.com) -->
+    <!-- Footer Section Begin -->
+    <?php include 'footer.php';?>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

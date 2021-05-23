@@ -1,67 +1,62 @@
-<?php
-  session_start();
- ?>
-
-<div class="site-navbar-wrap js-site-navbar bg-white">
-  
-  <div class="container">
-    <div class="site-navbar bg-black">
-      <div class="py-1">
-        <div class="row align-items-center">
-          <div class="col-2">
-            <h2 class="mb-0 site-logo"><a href="index.php"><img src="img/logo (1).png" width="150" height="75"></a></h2>
-          </div>
-          <div class="col-10">
-            <nav class="site-navigation text-right" role="navigation">
-              <div class="container">
-                
-                <div class="d-inline-block d-lg-none  ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle"><span class="icon-menu h3"></span></a></div>
-                <ul class="site-menu js-clone-nav d-none d-lg-block">
-                  <li class="<?php $aktif = ($_GET['page']=='home' || !isset($_GET['page'])) ? 'active' : ''; echo $aktif;  ?>">
-                    <a href="index.php">Home</a>
-                  </li>
-                  <li class="<?php $aktif = ($_GET['page']=='about') ? 'active' : ''; echo $aktif; ?>"><a href="?page=about">About</a></li>
-                  <li class="<?php $aktif = ($_GET['page']=='kamar') ? 'active' : ''; echo $aktif; ?>">
-                    <a href="?page=kamar">Room</a>
-                  </li>
-                    <li class="has-children <?php $aktif = ($_GET['page']=='reservasi') ? 'active' : ''; echo $aktif; ?>">
-                        <a href="?page=reservasi">Pesan</a>
-                        <ul class="dropdown arrow-top">
-                          <li class="<?php $aktif = ($_GET['page']=='reservasi') ? 'active' : ''; echo $aktif; ?>"><a href="?page=reservasi">Booking</a></li>
-                          <li class="<?php $aktif = ($_GET['page']=='konfirmasi_pembayaran') ? 'active' : ''; echo $aktif; ?>"><a href="?page=konfirmasi_pembayaran">Konfirmasi Pembayaran</a></li>
-                          <li class="<?php $aktif = ($_GET['page']=='cetak') ? 'active' : ''; echo $aktif; ?>"><a href="?page=cetak">Cetak Pembayaran</a></li>                          
-                            </ul>
-                          
-              <?php 
+<?php session_start();?>
+<header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <ul class="header__top__widget">
+                            <li><span class="icon_pin_alt"></span> Jl. Ciujung No.7, Kota Malang</li>
+                            <li><span class="icon_phone"></span> (0341) 4352686</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="header__top__right">
+                            <div class="header__top__auth">
+                                <ul>
+                                <?php 
                   if (@$_SESSION["username"]==""){
-
-
-             
-
-              ?>
-                          <li class="has-children <?php $aktif = ($_GET['page']=='kegiatan') ? 'active' : ''; echo $aktif; ?>">
-                        <a href="?page=kegiatan">Daftar/Login</a>
-                        <ul class="dropdown arrow-top">
-                          <li class="<?php $aktif = ($_GET['page']=='login') ? 'active' : ''; echo $aktif; ?>"><a href="?page=login">Login</a></li>
-                          <li class="<?php $aktif = ($_GET['page']=='register') ? 'active' : ''; echo $aktif; ?>"><a href="?page=register">Register</a></li>                          
-                            </ul>
-                          </li>
+                              ?>
+                          <li class="<?php $aktif = ($_GET['page']=='login') ? 'active' : ''; echo $aktif; ?>"><a href="login.php">Login</a></li>
+                          <li class="<?php $aktif = ($_GET['page']=='register') ? 'active' : ''; echo $aktif; ?>"><a href="register.php">Register</a></li>                          
                           <?php 
                             } else { ?>
                           <li><a href="logout.php">Logout</a></li>
-
                             <?php 
-
-
                             }
-
                           ?>
-                    </ul>
-              </div>
-            </nav>
-          </div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
+        <div class="header__nav__option">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <div class="header__logo">
+                            <a href="./index.php"><img src="img/logo2.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-10">
+                        <div class="header__nav">
+                            <nav class="header__menu">
+                                <ul class="menu__class">
+                                    <li class="active"><a href="./index.php">Home</a></li>
+                                    <li><a href="./rooms.php">Rooms</a></li>
+                                    <li><a href="./about.php">About Us</a></li>
+                                </ul>
+                            </nav>
+                            <div class="header__nav__widget">
+                                <a href="reservasi.php">Book Now <span class="arrow_right"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="canvas__open">
+                    <span class="fa fa-bars"></span>
+                </div>
+            </div>
+        </div>
+    </header>

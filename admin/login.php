@@ -1,29 +1,27 @@
 <?php
 session_start();
 ?>
-<head>
 
-<title> Halaman Login </title>
-<link href="css/bootstrap.min.css" rel="stylesheet">
-</head>
-
+<?php include 'template/headAdmin.php';?>
 <body>
-	<div class="container">
-		<div class="row text-center">
-			<div class="col-md-12">
-			<br/><br/>
-			<h2> HALAMAN LOGIN</h2>
-			</div>
-		</div>
-	</div>
-	<div class="row">
-	
-		<div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<strong> Masukan Username Dan Password </strong>
-				</div>
-		<div class="panel-body">
+    <div class="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Preloader - style you can find in spinners.css -->
+        <!-- ============================================================== -->
+        <div class="preloader">
+            <div class="lds-ripple">
+                <div class="lds-pos"></div>
+                <div class="lds-pos"></div>
+            </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- Preloader - style you can find in spinners.css -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Login box.scss -->
+        <!-- ============================================================== -->
+
+        <!-- membuat proses login -->
 			<?php 
 include 'koneksi.php';
 //menangkap data yang dikirim dari form login
@@ -64,7 +62,7 @@ if(isset($_POST["login"])){//jika tombol login di klik
 	}
 }
 ?>
-		 <form action="" method="POST" enctype="multipart/form-data">
+		 <!-- <form action="" method="POST" enctype="multipart/form-data">
 		 <br/>
 			<div class="form-group input-group">
 				<span class="input-group-addon"><i class="fa fa-tag"></i></span>
@@ -84,4 +82,65 @@ if(isset($_POST["login"])){//jika tombol login di klik
 </div>
 </div>
 </div>
+</body> -->
+
+<div class="auth-wrapper d-flex no-block justify-content-center align-items-center position-relative"
+            style="background:url(assets/images/big/auth-bg.jpg) no-repeat center center;">
+            <div class="auth-box row">
+                <div class="col-lg-7 col-md-5 modal-bg-img" style="background-image: url(assets/images/big/Admin.png);">
+                </div>
+                <div class="col-lg-5 col-md-7 bg-white">
+                    <div class="p-3">
+                        <div class="text-center">
+                            <img src="assets/images/big/icon.png" alt="wrapkit">
+                        </div>
+                        <h2 class="mt-3 text-center">Sign In</h2>
+                        <p class="text-center">Enter your email address and password to access admin panel.</p>
+                        <form class="mt-4" action="" method="POST" enctype="multipart/form-data">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label class="text-dark" for="username">Username</label>
+                                        <input class="form-control" type="username" name="username" class="username" id="username" type="text"
+                                            placeholder="enter your username">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label class="text-dark" for="password">Password</label>
+                                        <input class="form-control" type="password" name="password" class="form-control" id="password" type="password"
+                                            placeholder="enter your password">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 text-center">
+                                    <button type="submit" name="login" class="btn btn-block btn-dark">Sign In</button>
+                                </div>
+                                <div class="col-lg-12 text-center mt-5">
+                                    Admin Hotel Victoria <a href="#" class="text-danger">Only</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- Login box.scss -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- All Required js -->
+    <!-- ============================================================== -->
+    <script src="assets/libs/jquery/dist/jquery.min.js "></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="assets/libs/popper.js/dist/umd/popper.min.js "></script>
+    <script src="assets/libs/bootstrap/dist/js/bootstrap.min.js "></script>
+    <!-- ============================================================== -->
+    <!-- This page plugin js -->
+    <!-- ============================================================== -->
+    <script>
+        $(".preloader ").fadeOut();
+    </script>
 </body>
+
+</html>
