@@ -4,9 +4,9 @@
   
   if($sqlb){
   	echo "Data Berhasil Dihapus";
-	header("Location:index.php?module=tabeltransaksi");
+	header("Location:tabeltransaksi.php?module=tabeltransaksi");
   }else{
   	echo "Gagal Menghapus";
-	header("Location:index.php?module=tabeltransaksi");
+	header("Location:indextabeltransaksi.php?module=tabeltransaksi");
   }
 ?>

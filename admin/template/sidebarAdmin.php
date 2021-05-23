@@ -26,8 +26,9 @@
                                 aria-expanded="false"><i data-feather="grid" class="feather-icon"></i><span
                                     class="hide-menu">Transaksi </span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                                <li class="sidebar-item"><a href="Tabeltransaksi.php" class="sidebar-link"><span
+                                <li class="sidebar-item"><a href="tabeltransaksi.php" class="sidebar-link"><span
                                             class="hide-menu">
+                                            
                                             Data Transaksi
                                         </span></a>
                                 </li>
