@@ -4,9 +4,9 @@
   
   if($sqlb){
   	echo "Data Berhasil Dihapus";
-	header("Location:index.php?module=tabelkamar");
+	header("Location:tabelkamar.php?module=tabelkamar");
   }else{
   	echo "Gagal Menghapus";
-	header("Location:index.php?module=tabelkamar");
+	header("Location:indextabelkamar.php?module=tabelkamar");
   }
 ?>
