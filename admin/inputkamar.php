@@ -50,10 +50,10 @@
 		
         if ($q) {
             echo "<script>alert('Data Berhasil Di simpan');
-			window.location.href='index.php?module=tabelkamar';</script>";
+			window.location.href='tabelkamar.php';</script>";
          }else {
             echo "<script>alert('Data Gagal Disimpan!');
-			window.location.href='index.php?module=tabelkamar';</script>";
+			window.location.href='tabelkamar.php';</script>";
         }
     }
 
