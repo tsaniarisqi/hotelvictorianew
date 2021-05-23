@@ -34,7 +34,7 @@ include "koneksi.php" ;
 
 <?php 
 include 'koneksi.php';
-$sql= mysqli_query($conn,"select * from konfirmasi where id_konfirmasi='$_GET[id_konfirmasi]' and status='Y'");
+$sql= mysqli_query($conn,"select * from konfirmasi where id_konfirmasi='$_GET[id_konfirmasi]'");
 $no=1;
 while($data=mysqli_fetch_array($sql)){
 

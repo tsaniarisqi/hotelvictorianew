@@ -1,21 +1,21 @@
 <?php
-  if(@$_SESSION['username']!=""){
+//   if(@$_SESSION['username']!=""){
+  if(!isset($_GET['konf'])){
 ?>
-<div class="site-blocks-cover overlay" style="background-image: url(images/mercure0.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
-	<div class="container">
-		<div class="row align-items-center justify-content-center">
-			<div class="col-md-7 text-center" data-aos="fade">
-				<span class="caption mb-3">pembayaran</span>
-				<h1 class="mb-4">Form Pembayaran</h1>
-			</div>
-		</div>
-	</div>
-</div>
+ <?php include 'head.php';?>
+<?php include 'header.php';?>
+<div class="site-section bg-light">
+    <div class="container">
+      <div class="row" style="margin-top: 30pt;">
+        <div class="col-md-6 mx-auto text-center mb-5 section-heading">
+          <h2 class="mb-5">Pembayaran</h2>
+        </div>
+      </div>
 <div class="site-section site-section-sm">
-	<div class="container">
+	<div class="container" style="margin-top: -30pt">
 		<div class="row">
 			
-			<div class="col-md-12 col-lg-8 mb-5">
+			<div class="col-md col-lg mb-5">
 <div class="row">
 <div class="col-md-4"></div>
 <div class="col-md-4">
@@ -44,15 +44,18 @@
 				
 
 				</div>
-				<div class="form-group">
-				<input type="submit" name="submit" value="send konfirmasi" />
-				</div>
+				<div class="row">
+              <div class="col-md-6 form-group">
+                <input type="submit" value="Konfirmasi" name="submit" class="btn btn-primary text-white py-3 px-5 font-weight-bold">
+              </div>
+            </div>
 				</form>
 				</div>
 			</div>
 		</div>
 	</div>
 <div class="col-md-12"></div>
+
 </div>
 
 <?php
@@ -111,8 +114,5 @@ if($tipe_file == "image/jpeg" || $tipe_file == "image/png"){ // Cek apakah tipe 
   header("location:?page=konfirmasi_pembayaran");
 }
 }
-}else{
-	 echo "<script>alert('Silahkan Login Terlebih Dahulu atau registrasi terlebih dahulu!');
-           window.location='index.php?page=login';</script>";
-}	
+}
 	?>

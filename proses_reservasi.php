@@ -24,12 +24,12 @@
     if(mysqli_query($conn,$sql)){
         echo "<script>
     alert('Reservasi sukses!');
-    window.location.href='index.php?page=reservasi';
+    window.location.href='konfirmasi_pembayaran.php';
     </script>";
     }else {
         echo "<script>
     alert('Reservasi gagal! Kesalahan Database!');
-    window.location.href='index.php?page=reservasi';
+    window.location.href='reservasi.php';
     </script>";
     }
 }

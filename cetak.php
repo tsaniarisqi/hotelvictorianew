@@ -1,7 +1,11 @@
+<?php include 'koneksi.php'; ?>
 <?php
-  if(@$_SESSION['username']!=""){
+//   if(@$_SESSION['username']!=""){
+  if(!isset($_GET['konf'])){
 ?>
-<div class="site-blocks-cover overlay" style="background-image: url(images/mercure0.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+<?php include 'head.php';?>
+<?php include 'header.php';?>
+<!-- <div class="site-blocks-cover overlay" style="background-image: url(images/mercure0.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
 	<div class="container">
 		<div class="row align-items-center justify-content-center">
 			<div class="col-md-7 text-center" data-aos="fade">
@@ -10,7 +14,7 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div> -->
 <div class="site-section site-section-sm">
 	<div class="container">
 		<div class="row">
@@ -31,7 +35,7 @@
 					</tr>
 			<?php 
 				include 'koneksi.php';
-				$sql= mysqli_query($conn,"select * from konfirmasi where id_pelanggan='$_SESSION[id_pelanggan]' and status='Y'");
+				$sql= mysqli_query($conn,"select * from konfirmasi where id_pelanggan='$_SESSION[id_pelanggan]'");
 				$no=1;
 				while($data=mysqli_fetch_array($sql)){
 			?>
@@ -52,10 +56,6 @@
 		</table>
 
 <?php
-}else{
-
-	 echo "<script>alert('Silahkan Login Terlebih Dahulu atau registrasi terlebih dahulu!');
-           window.location='index.php?page=login';</script>";
 }
 ?>
 					
