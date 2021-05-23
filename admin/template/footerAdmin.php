@@ -1,4 +1,3 @@
 <footer class="footer text-center text-muted">
-                All Rights Reserved by Admin. Designed and Developed by <a
-                    href="https://wrappixel.com">WrapPixel</a>.
+                All Rights Reserved by Ceul,Ana,Riris,Tria,Elma</a>.
 </footer>

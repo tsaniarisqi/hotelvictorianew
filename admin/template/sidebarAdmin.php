@@ -37,7 +37,7 @@
                                 aria-expanded="false"><i data-feather="bar-chart" class="feather-icon"></i><span
                                     class="hide-menu">Customer </span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                                <li class="sidebar-item"><a href="tabelCustomer.php" class="sidebar-link"><span
+                                <li class="sidebar-item"><a href="tabeltamu.php" class="sidebar-link"><span
                                             class="hide-menu">Data Customer
                                         </span></a>
                                 </li>
