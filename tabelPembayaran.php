@@ -27,26 +27,28 @@
 					<table width="100%" border="1" class="table table-bordered table-striped">
 						<tr>
 						<th>No</th> 
-						<th>id konfirmasi</th>
-						<th>id pelanggan</th>
-						<th>bank</th>
-						<th>Jumlah Transfer</th>
+						<th>No Faktur</th> 
+						<th>Id Pelanggan</th> 
+						<th>No Kamar</th>
+						<th>Lama Menginap</th>
+						<th>Total Biaya</th>
 						<th>Aksi</th>
 					</tr>
 			<?php 
 				include 'koneksi.php';
-				$sql= mysqli_query($conn,"select * from konfirmasi where id_pelanggan='$_SESSION[id_pelanggan]'");
+				$sql= mysqli_query($conn,"select * from transaksi where id_pelanggan='$_SESSION[id_pelanggan]'");
 				$no=1;
 				while($data=mysqli_fetch_array($sql)){
 			?>
 					<tr>
 						<td align="center"><?php echo $no; ?></td>
-						<td align="center"><?php echo $data['id_konfirmasi'] ?> </td>
+						<td align="center"><?php echo $data['No_Faktur'] ?></td>
 						<td align="center"><?php echo $data['id_pelanggan'] ?> </td>
-						<td align="center"><?php echo $data['bank'] ?> </td>
-						<td align="center"><?php echo $data['jumlah_transfer'] ?> </td>
+						<td align="center"><?php echo $data['No_Kamar'] ?> </td>
+						<td align="center"><?php echo $data['lama_menginap'] ?> </td>
+						<td align="center"><?php echo $data['Tarif'] ?> </td>
 						<td align="center">
-						<a  type="submit" href="cetakpembayaran.php?id_konfirmasi=<?php echo $data['id_konfirmasi'];?>" target="_blank" class="btn btn-success">Cetak Pembayaran</a>
+						<a  type="submit" href="konfirmasi_pembayaran.php?No_Faktur=<?php echo $data['No_Faktur'];?>" target="_blank" class="btn btn-success">Konfirmasi Pembayaran</a>
 			</td>
 			</tr>
 			<?php

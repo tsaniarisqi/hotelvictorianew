@@ -11,11 +11,11 @@ include "koneksi.php" ;
     <table width="100%">
 	<tr>
 	<td><div align="center">
-	<h3><label>HOTEL MERCURE </label></h3>
-	<label>Jl. Purus IV No.8, Purus, Padang Baru</label>
-	<label>Kota Padang, Sumatera Barat 25115</label> 
-	<label>Telp : (0751) 891188</label> 
-	<label>Email : info@mercurepadang.com</label>
+	<h3><label>HOTEL PELANGI </label></h3>
+	<label>Jalan Ciujung No.7, Kota Malang</label>
+	<label>Kota Malang, Jawa timur</label> 
+	<label>Telp : (0341) 435 2686</label> 
+	<label>Phone : 0857 9144 6830</label>
 	<div align="center">Cetak Pembayaran
 </div>
 	</td>

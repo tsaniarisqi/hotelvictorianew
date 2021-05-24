@@ -29,10 +29,10 @@
 				<label >Nama</label>
 				<input type="text" class="form-control" name="nama" value="<?php echo $_SESSION['nama']; ?>">
 				</div>
-				<div class="form-group">
+				<!-- <div class="form-group">
 				<label>Jumlah Transfer</label>
 				<input type="text" class="form-control" name="jumlah_transfer">
-				</div>
+				</div> -->
 				<div class="form-group">
 				<label>Bank</label>
 				<input type="text" class="form-control" name="bank">
@@ -62,7 +62,7 @@
 include "koneksi.php"; 
 	 if(isset($_POST['submit'])){
 		$nama=$_POST['id_pelanggan'];
-		$jumlah_transfer=$_POST['jumlah_transfer'];
+		//$jumlah_transfer=$_POST['jumlah_transfer'];
 		$bank=$_POST['bank'];
 		$status=$_POST['status'];
 	
@@ -81,10 +81,10 @@ if($tipe_file == "image/jpeg" || $tipe_file == "image/png"){ // Cek apakah tipe 
       // Jika gambar berhasil diupload, Lakukan :  
       // Proses simpan ke Database
 
-	$sqlsimpan = mysqli_query($conn, "insert into konfirmasi (id_pelanggan,jumlah_transfer, bank, gambar,status)
+	$sqlsimpan = mysqli_query($conn, "insert into konfirmasi (id_pelanggan, bank, gambar,status)
 	 values
 	  ('$nama',
-	  '$jumlah_transfer',
+	  
 	  '$bank',
 	  '$nama_file',
 	  '$status')");
@@ -92,7 +92,7 @@ if($tipe_file == "image/jpeg" || $tipe_file == "image/png"){ // Cek apakah tipe 
 	if($sqlsimpan){ // Cek jika proses simpan ke database sukses atau tidak
         // Jika Sukses, Lakukan :
         echo "<script>alert('data berhasil disimpan!!!')</script>";
-        header("location:index.php"); // Redirectke halaman index.php
+        header("location:cetak.php"); // Redirectke halaman index.php
       }else{
         // Jika Gagal, Lakukan :
         echo "<script>alert('Maaf, Terjadi kesalahan saat mencoba untuk menyimpan data ke database.!!!')</script>";

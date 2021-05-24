@@ -43,11 +43,12 @@
                         <div class="header__nav">
                             <nav class="header__menu">
                                 <ul class="menu__class">
-                                    <li class="active"><a href="./index.php">Home</a></li>
+                                    <li ><a href="./index.php">Home</a></li>
+                                    <li ><a href="./rooms.php">Rooms</a></li>
                                     <li class="has-children "><a>Pesan</a>
                         <ul class="dropdown arrow-top">
                           <li><a href="reservasi.php">Booking</a></li>
-                          <li ><a href="konfirmasi_pembayaran.php">Konfirmasi Pembayaran</a></li>
+                          <li ><a href="tabelPembayaran.php">Pembayaran</a></li>
                           <li ><a href="cetak.php">Cetak Pembayaran</a></li>                          
                             </ul>
                           </li>

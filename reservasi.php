@@ -4,16 +4,6 @@ if (!isset($_GET['konf'])) {
   ?>
   <?php include 'head.php';?>
 <?php include 'header.php';?>
-  <!-- <div class="site-blocks-cover overlay" style="background-image: url(images/mercure0.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
-    <div class="container">
-      <div class="row align-items-center justify-content-center">
-        <div class="col-md-7 text-center" data-aos="fade">
-          <span class="caption mb-3">Luxurious Rooms</span>
-          <h1 class="mb-4">Pemesanan</h1>
-        </div>
-      </div>
-    </div>
-  </div> -->
   <div class="site-section bg-light">
     <div class="container">
       <div class="row" style="margin: 30pt;">
@@ -27,13 +17,13 @@ if (!isset($_GET['konf'])) {
             <div class="row">
               <div class="col-md form-group">
                 <label class="text-black font-weight-bold" for="kamar">Pilih Jenis Kamar</label>
-                <select required name="kamar" id="kamar" class="form-control" onChange="getkecamatan(this.value)">
+                <select required name="kamar" id="kamar" class="form-control" >
                   <option value="">--Pilih Kamar--</option>
                   <?php
                   $sql = mysqli_query($conn, "SELECT * FROM kamar");
                   foreach ($sql as $value) {
                     ?>
-                    <option value="<?= $value['No_Kamar']; ?>"><?= $value['Jenis']; ?></option>
+                    <option value="<?= $value['No_Kamar']; ?>"><?= $value['Jenis']; ?> : <?= $value['Tarif']?></option>
                   <?php
                 }
                 ?>
@@ -53,7 +43,7 @@ if (!isset($_GET['konf'])) {
               <div class="row">
                 <div class="col-md-12 form-group">
                   <label class="text-black font-weight-bold" for="tarif">Tarif</label>
-                  <input type="number" id="tarif" name="tarif" class="form-control">
+                  <input type="text" id="tarif" name="tarif" class="form-control" value="">
                 </div>
               </div>
             </div>
@@ -111,49 +101,14 @@ if (!isset($_GET['konf'])) {
             </div>
           </form>
         </div>
-        <!-- <div class="col-md-5" data-aos="fade-up" data-aos-delay="200">
-          <div class="row">
-            <div class="col-md-10 ml-auto contact-info">
-              <p><span style="font-size: 30px;" class="d-block"><strong>ALAMAT</strong>:</span> <span style="font-size: 35px;" class="text-black"> Jl. Purus IV No.8, Purus, Padang Bar., Kota Padang, Sumatera Barat 25115</span></p>
-              <p><span style="font-size: 30px;" class="d-block"><strong>TELEPON</strong>:</span> <span style="font-size: 35px;" class="text-black"> (0751) 891188</span></p>
-              <p><span style="font-size: 30px;" class="d-block"><strong>EMAIL</strong>:</span> <span style="font-size: 35px;" class="text-black"> info@mercurepadang.com</span></p>
-            </div>
-          </div>
-        </div> -->
-        
+
       </div>
     </div>
   </div>
   <!--  -->
 <?php
-} elseif (isset($_GET['konf'])) {
-  $kamar=$_POST['kamar'];
-  $tarif=substr($_POST['tarif'],3);
-  $nama=$_POST['nama'];
-  $telpon=$_POST['nohp'];
-  $email=$_POST['email'];
-  $cek_in=$_POST['checkin'];
-  $cek_out=$_POST['checkout'];
-  $jml_tamu=$_POST['jml_tamu'];
-  $pesan=$_POST['pesan'];
-  $waktu1=strtotime($_POST['checkin']);
-  $waktu2=strtotime($_POST['checkout']);
-  $secs = $waktu2 - $waktu1;
-  $today = date('Y-m-d');
-  $lama_menginap = $secs / 86400;
-  if ($lama_menginap <= 0) {
-    echo "<script>
-    alert('Data tidak Valid!');
-    window.location.href='index.php?page=reservasi';
-    </script>";
-  }elseif ($cek_in < $today) {
-    echo "<script>
-    alert('Tidak bisa memesan kamar pada tanggal yang sudah lewat!');
-    window.location.href='index.php?page=reservasi';
-    </script>";
-  }
-  ?>
+} 
+   ?>
   
-<?php
-}
+
 
