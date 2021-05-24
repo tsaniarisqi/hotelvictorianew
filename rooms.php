@@ -53,7 +53,7 @@
                             <li><span>Type:</span><?= $value['Type']; ?><span> Bed</li>
                             <li><span>Deskripsi:</span><?= $value['deskripsi']; ?></li>
                         </ul>
-                        <a href="booking.html">BOOKING</a>
+                        <a href="reservasi.php">BOOKING</a>
                     </div>
                 </div>
                 <?php
