@@ -11,7 +11,7 @@ include "koneksi.php" ;
     <table width="100%">
 	<tr>
 	<td><div align="center">
-	<h3><label>HOTEL PELANGI </label></h3>
+	<h3><label>HOTEL VICTORIA </label></h3>
 	<label>Jalan Ciujung No.7, Kota Malang</label>
 	<label>Kota Malang, Jawa timur</label> 
 	<label>Telp : (0341) 435 2686</label> 
