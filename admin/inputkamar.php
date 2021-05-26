@@ -77,6 +77,14 @@
                                                         </div>
                                                     </div>
                                             </div>
+                                            <label class="col-md-2">Deskripsi</label>
+                                            <div class="col-md-10">
+                                                    <div class="col-md">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" name = "deskripsi" placeholder="Masukkan Deskripsi">
+                                                        </div>
+                                                    </div>
+                                            </div>                                            
                                         </div>
                                         <div class="text-right">
                                             <input type="submit" name = "submit" class="btn btn-info" value = "SIMPAN">
@@ -143,8 +151,9 @@
         $Jenis = $_POST['Jenis'];
         $Type= $_POST['Type'];
         $Tarif= $_POST['Tarif'];
+        $deskripsi = $_POST['deskripsi'];
 
-        $q = mysqli_query($con, "INSERT INTO Kamar(No_Kamar,Jenis,Type,Tarif) VALUES('$No_Kamar','$Jenis','$Type','$Tarif')");
+        $q = mysqli_query($con, "INSERT INTO Kamar(No_Kamar,Jenis,Type,Tarif,deskripsi) VALUES('$No_Kamar','$Jenis','$Type','$Tarif','$deskripsi')");
 		
         if ($q) {
             echo "<script>alert('Data Berhasil Di simpan');

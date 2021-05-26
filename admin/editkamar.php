@@ -20,7 +20,7 @@ $data=mysqli_fetch_array($sql);
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-7 align-self-center">
-                        <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Tambah Data Customer</h4>
+                        <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Edit Data Kamar</h4>
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
@@ -53,6 +53,10 @@ $data=mysqli_fetch_array($sql);
                 <td>Tarif</td>
                 <td> <input type="text" name="Tarif" id="" value="<?php echo $data['Tarif']?>"> </td>
             </tr>
+			<tr style="color: black;">
+                <td>Deskripsi</td>
+                <td> <input type="text" name="deskripsi" id="" value="<?php echo $data['deskripsi']?>"> </td>
+            </tr>            
                 <td></td>
                 <td> 
 				<input type="submit" name="submit" id="" class="btn btn-success" value="SIMPAN">
@@ -70,8 +74,9 @@ $data=mysqli_fetch_array($sql);
         $Jenis = $_POST['Jenis'];
         $Type= $_POST['Type'];
         $Tarif= $_POST['Tarif'];
+        $deskripsi = $_POST['deskripsi'];
 
-        $q = mysqli_query($con, "UPDATE kamar SET No_Kamar='$_POST[No_Kamar]',Jenis='$_POST[Jenis]',Type='$_POST[Type]',Tarif='$_POST[Tarif]' where No_Kamar='$_POST[No_Kamar]'");
+        $q = mysqli_query($con, "UPDATE kamar SET No_Kamar='$_POST[No_Kamar]',Jenis='$_POST[Jenis]',Type='$_POST[Type]',Tarif='$_POST[Tarif]',deskripsi='$_POST[deskripsi]' where No_Kamar='$_POST[No_Kamar]'");
 	
 		
         if ($q) {

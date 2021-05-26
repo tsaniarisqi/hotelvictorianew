@@ -44,6 +44,7 @@
                                             <th>Type Bed</th>
                                             <th>Tarif</th>
                                             <th>Aksi</th>
+                                            <th>Deskripsi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -62,6 +63,7 @@
                                             <td align="center"><?php echo $row['Jenis'] ?> </td>
                                             <td align="center"><?php echo $row['Type'] ?> </td>
                                             <td align="center"><?php echo $row['Tarif'] ?> </td>
+                                            <td align="center"><?php echo $row['deskripsi'] ?> </td>
                                             <td align="center">
                                             <a href="editkamar.php?module=editkamar.php&No_Kamar=<?php echo $row['No_Kamar'];?>"class="btn btn-success">Edit</a>
                                             <a href="hapuskamar.php?module=hapuskamar.php&No_Kamar=<?php echo $row['No_Kamar'];?>"class="btn btn-danger">Hapus</a>
