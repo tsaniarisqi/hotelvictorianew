@@ -32,7 +32,13 @@
                                             Data Transaksi
                                         </span></a>
                                 </li>
+                               
+                                <li class="sidebar-item"><a href="konfirmasi.php" class="sidebar-link"><span
+                                            class="hide-menu"> Data Konfirmasi
+                                        </span></a>
+                                </li>
                             </ul>
+                          
                         </li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
                                 aria-expanded="false"><i data-feather="bar-chart" class="feather-icon"></i><span

@@ -4,9 +4,9 @@
   
   if($sqlb){
   	echo "Data Berhasil Dihapus";
-	header("Location:index.php?module=konfirmasi");
+	header("Location:konfirmasi.php?module=konfirmasi");
   }else{
   	echo "Gagal Menghapus";
-	header("Loation:index.php?module=konfirmasi");
+	header("Loation:konfirmasi.php?module=konfirmasi");
   }
 ?>
