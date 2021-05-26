@@ -77,21 +77,20 @@
                                     function:<code> $().DataTable();</code>. You can refer full documentation from here
                                     <a href="https://datatables.net/">Datatables</a></h6> -->
                                 <div class="table-responsive">
-                                <A href="inputtamu.php" class="btn btn-primary">Tambah Data</a><br><br>
-                                <table width="100%" border="1" class="table table-bordered table-striped">
-
-                                <tr> 
-                                <th>No</th>
-                                <th>No Id</th>
-                                <th>Nama</th>
-                                <th>Alamat</th>
-                                <th>Asal</th>
-                                <th>No Telpon</th>
-                                <th>Jenis Kelamin</th>
-                                <th>Aksi</th>
-                                </tr>
-
-
+                                <table id="zero_config" class="table table-striped table-bordered no-wrap">
+                                <thead>
+                                    <tr> 
+                                        <th>No</th>
+                                        <th>No Id</th>
+                                        <th>Nama</th>
+                                        <th>Alamat</th>
+                                        <th>Asal</th>
+                                        <th>No Telpon</th>
+                                        <th>Jenis Kelamin</th>
+                                        <th>Aksi</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
                                 <?php  
                                 include "koneksi.php";
                                 $sql = mysqli_query($con,"select * from tamu");
@@ -138,6 +137,7 @@
                                         ?>
                                     </p>
                                 <?php endif; ?>
+                            </tbody>
 
                 <!--  -->
                 <!-- ============================================================== -->
