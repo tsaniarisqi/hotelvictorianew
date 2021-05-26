@@ -27,15 +27,15 @@
 					<table width="100%" border="1" class="table table-bordered table-striped">
 						<tr>
 						<th>No</th> 
-						<th>id konfirmasi</th>
-						<th>id pelanggan</th>
-						<th>bank</th>
-						<th>Jumlah Transfer</th>
+						<th>ID Konfirmasi</th>
+						<th>ID Pelanggan</th>
+						<th>Bank</th>
+						<th>Total Biaya</th>
 						<th>Aksi</th>
 					</tr>
 			<?php 
 				include 'koneksi.php';
-				$sql= mysqli_query($conn,"select * from konfirmasi where id_pelanggan='$_SESSION[id_pelanggan]'");
+				$sql= mysqli_query($conn,"select konfirmasi.*,transaksi.Tarif,konfirmasi.id_konfirmasi,konfirmasi.id_pelanggan,konfirmasi.bank from konfirmasi INNER JOIN transaksi ON transaksi.id_pelanggan=konfirmasi.id_pelanggan");
 				$no=1;
 				while($data=mysqli_fetch_array($sql)){
 			?>
@@ -44,7 +44,7 @@
 						<td align="center"><?php echo $data['id_konfirmasi'] ?> </td>
 						<td align="center"><?php echo $data['id_pelanggan'] ?> </td>
 						<td align="center"><?php echo $data['bank'] ?> </td>
-						<td align="center"><?php echo $data['jumlah_transfer'] ?> </td>
+						<td align="center"><?php echo $data['Tarif'] ?> </td>
 						<td align="center">
 						<a  type="submit" href="cetakpembayaran.php?id_konfirmasi=<?php echo $data['id_konfirmasi'];?>" target="_blank" class="btn btn-success">Cetak Pembayaran</a>
 			</td>

@@ -69,8 +69,8 @@
 					</div>
 					<div action="proses.php" method="get">
 					      <p>Jenis Kelamin</p>
-					      <p><input type='radio' name='jk' value='pria' />Pria</p>
-					      <p><input type='radio' name='jk' value='wanita' />Wanita</p>
+					      <p><input type='radio' name='jk' value='Laki - Laki' />Laki Laki</p>
+					      <p><input type='radio' name='jk' value='Perempuan' />Perempuan</p>
 					 </div>     
 					<div class="row form-group">
 						<div class="col-md-12">

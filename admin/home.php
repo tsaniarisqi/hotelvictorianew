@@ -95,7 +95,7 @@
                                     <div class="d-inline-flex align-items-center">
                                         <h2 class="text-dark mb-1 font-weight-medium">
                                             <?php include "koneksi.php";
-                                                $result=mysqli_query($con,"SELECT count(*) as total from tamu");
+                                                $result=mysqli_query($con,"SELECT count(*) as total from pelanggan");
                                                 $data=mysqli_fetch_assoc($result);
                                                 echo $data['total']; 
                                             ?>

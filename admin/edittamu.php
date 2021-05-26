@@ -47,7 +47,7 @@ $data=mysqli_fetch_array($sql);
 				</tr>
             <tr style="color: black;">
                 <td>Alamat</td>
-                <td> <textarea name="Alamat" id="" cols="20" rows="5" value="<?php echo $data['Alamat']?>""></textarea> </td>
+                <td> <input type="text" name="Alamat" id="" value="<?php echo $data['Alamat']?>""></textarea> </td>
             </tr>
 			<tr style="color: black;">
                 <td>Asal</td>
@@ -59,10 +59,10 @@ $data=mysqli_fetch_array($sql);
             </tr>
 			<tr style="color: black;">
                 <td>Jenis Kelamin</td>
-                <td><select name="jk" id="jk"> 
-				<option value="">-pilih-</option>
+                <td><select name="jk" id="jk" > 
+				<option value="">--Pilih--</option>
 				<option value="Laki Laki">Laki-Laki</option>
-				<option value="perempuan">Perempuan</option>
+				<option value="Perempuan">Perempuan</option>
 			</tr>
             <tr>
                 <td></td>

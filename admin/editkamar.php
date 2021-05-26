@@ -55,7 +55,8 @@ $data=mysqli_fetch_array($sql);
             </tr>
 			<tr style="color: black;">
                 <td>Deskripsi</td>
-                <td> <textarea name="deskripsi" id="deskripsi" class="form-control " cols="30" rows="8"  value="<?php echo $data['deskripsi']?>"></textarea> </td>
+                <td> <input type="text" name="deskripsi" id="" value="<?php echo $data['deskripsi']?>"> </td>
+                <!-- <td> <textarea name="deskripsi" id="" class="form-control " cols="30" rows="8"  value="<?php echo $data['deskripsi']?>"></textarea> </td> -->
             </tr>            
                 <td></td>
                 <td> 

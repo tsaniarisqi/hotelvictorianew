@@ -80,43 +80,44 @@
                                 <table id="zero_config" class="table table-striped table-bordered no-wrap">
                                 <thead>
                                     <tr> 
-                                        <th>No</th>
+                                        <!-- <th>No</th> -->
                                         <th>No Id</th>
                                         <th>Nama</th>
+                                        <th>Username</th>
+                                        <th>Email</th>
                                         <th>Alamat</th>
-                                        <th>Asal</th>
-                                        <th>No Telpon</th>
                                         <th>Jenis Kelamin</th>
+                                        <th>No Telp</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 <?php  
                                 include "koneksi.php";
-                                $sql = mysqli_query($con,"select * from tamu");
-                                $no=1;
+                                $sql = mysqli_query($con,"SELECT id_pelanggan, nama, username, no_hp, alamat, email, jk FROM pelanggan");
+                                // $no=1;
                                 while($row=mysqli_fetch_array($sql)){
 
                                 ?>
 
                                 <tr>
-                                <td align="center"><?php echo $no; ?></td>
-                                <td align="center"><?php echo $row['id_pelanggan'] ?> </td>
-                                <td align="center"><?php echo $row['Nama'] ?> </td>
-                                <td align="center"><?php echo $row['Alamat'] ?> </td>
-                                <td align="center"><?php echo $row['Asal'] ?> </td>
-                                <td align="center"><?php echo $row['NoTlp'] ?> </td>
+                                <!-- <td align="center"><?php echo $no; ?></td> -->
+                                <td align="center"><?php echo $row['id_pelanggan'] ?></td>
+                                <td align="center"><?php echo $row['nama'] ?> </td>
+                                <td align="center"><?php echo $row['username'] ?> </td>
+                                <td align="center"><?php echo $row['email'] ?> </td>
+                                <td align="center"><?php echo $row['alamat'] ?> </td>
                                 <td align="center"><?php echo $row['jk'] ?> </td>
+                                <td align="center"><?php echo $row['no_hp'] ?> </td>
 
 
                                 <td align="center">
-                                <a href="edittamu.php?module=edittamu&id_pelanggan=<?php echo $row['id_pelanggan'];?> "class="btn btn-success">Edit</a>
                                 <a href="hapustamu.php?module=hapustamu&id_pelanggan=<?php echo $row['id_pelanggan'];?>"class="btn btn-danger">Hapus</a>
                                 </td>
                                 </tr>
 
                                 <?php 
-                                $no++;
+                                // $no++;
                                 }
                                 ?>
                                 </table> 

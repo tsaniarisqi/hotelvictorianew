@@ -58,7 +58,7 @@
                 <td><select name="jk" id="jk"> 
 				<option value="">-pilih-</option>
 				<option value="Laki Laki">Laki-Laki</option>
-				<option value="perempuan">Perempuan</option>
+				<option value="Perempuan">Perempuan</option>
 			</tr>
             <tr>
                 <td></td>

@@ -73,7 +73,7 @@ include "koneksi.php" ;
 	Pemilik
 	<br></br>
 	<br></br>
-	(Afri Yulianti)
+	Admin Hotel Victoria
 	</br>
 	</td>
 	</tr>
