@@ -3,6 +3,8 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 <?php include '../admin/template/headAdmin.php';?>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <head>
 <?php include '../admin/template/headerAdmin.php';?>
 <?php include '../admin/template/sidebarAdmin.php';?>
@@ -49,14 +51,18 @@
                             <div class="d-flex d-lg-flex d-md-block align-items-center">
                                 <div>
                                     <div class="d-inline-flex align-items-center">
-                                        <h2 class="text-dark mb-1 font-weight-medium">236</h2>
-                                        <span
-                                            class="badge bg-primary font-12 text-white font-weight-medium badge-pill ml-2 d-lg-block d-md-none">+18.33%</span>
+                                        <h2 class="text-dark mb-1 font-weight-medium">
+                                            <?php include "koneksi.php";
+                                                $result=mysqli_query($con,"SELECT count(*) as total from kamar");
+                                                $data=mysqli_fetch_assoc($result);
+                                                echo $data['total']; 
+                                            ?>
+                                        </h2>
                                     </div>
-                                    <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">New Clients</h6>
+                                    <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">Kamar</h6>
                                 </div>
                                 <div class="ml-auto mt-md-3 mt-lg-0">
-                                    <span class="opacity-7 text-muted"><i data-feather="user-plus"></i></span>
+                                    <span class="opacity-7 text-muted"><i class="fa fa-hotel" style="font-size:36px"></i></span>
                                 </div>
                             </div>
                         </div>
@@ -65,13 +71,17 @@
                         <div class="card-body">
                             <div class="d-flex d-lg-flex d-md-block align-items-center">
                                 <div>
-                                    <h2 class="text-dark mb-1 w-100 text-truncate font-weight-medium"><sup
-                                            class="set-doller">$</sup>18,306</h2>
-                                    <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">Earnings of Month
-                                    </h6>
+                                    <h2 class="text-dark mb-1 w-100 text-truncate font-weight-medium">
+                                            <?php include "koneksi.php";
+                                                $result=mysqli_query($con,"SELECT count(*) as total from transaksi");
+                                                $data=mysqli_fetch_assoc($result);
+                                                echo $data['total']; 
+                                            ?>
+                                    </h2>
+                                    <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">Transaksi</h6>
                                 </div>
                                 <div class="ml-auto mt-md-3 mt-lg-0">
-                                    <span class="opacity-7 text-muted"><i data-feather="dollar-sign"></i></span>
+                                    <span class="opacity-7 text-muted"><i class='fas fa-clipboard' style="font-size:36px"></i></span>
                                 </div>
                             </div>
                         </div>
@@ -81,27 +91,18 @@
                             <div class="d-flex d-lg-flex d-md-block align-items-center">
                                 <div>
                                     <div class="d-inline-flex align-items-center">
-                                        <h2 class="text-dark mb-1 font-weight-medium">1538</h2>
-                                        <span
-                                            class="badge bg-danger font-12 text-white font-weight-medium badge-pill ml-2 d-md-none d-lg-block">-18.33%</span>
+                                        <h2 class="text-dark mb-1 font-weight-medium">
+                                            <?php include "koneksi.php";
+                                                $result=mysqli_query($con,"SELECT count(*) as total from tamu");
+                                                $data=mysqli_fetch_assoc($result);
+                                                echo $data['total']; 
+                                            ?>
+                                        </h2>
                                     </div>
-                                    <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">New Projects</h6>
+                                    <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">Customer</h6>
                                 </div>
                                 <div class="ml-auto mt-md-3 mt-lg-0">
-                                    <span class="opacity-7 text-muted"><i data-feather="file-plus"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="d-flex d-lg-flex d-md-block align-items-center">
-                                <div>
-                                    <h2 class="text-dark mb-1 font-weight-medium">864</h2>
-                                    <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">Projects</h6>
-                                </div>
-                                <div class="ml-auto mt-md-3 mt-lg-0">
-                                    <span class="opacity-7 text-muted"><i data-feather="globe"></i></span>
+                                    <span class="opacity-7 text-muted"><i class='fa fa-user' style='font-size:36px'></i></span>
                                 </div>
                             </div>
                         </div>
