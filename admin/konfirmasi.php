@@ -16,7 +16,7 @@
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
                                     <li class="breadcrumb-item"><a href="indexAdmin.php" class="text-muted">Home</a></li>
-                                    <li class="breadcrumb-item text-muted active" aria-current="page">Konfrimasi</li>
+                                    <li class="breadcrumb-item text-muted active" aria-current="page">Konfirmasi</li>
                                 </ol>
                             </nav>
                         </div>
@@ -33,7 +33,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Data Konfrimasi</h4>
+                            <h4 class="card-title">Data Konfirmasi</h4>
                             <div class="table-responsive">
                                 <table id="zero_config" class="table table-striped table-bordered wrap">
                                     <thead>
