@@ -81,7 +81,7 @@
                                             <div class="col-md-10">
                                                     <div class="col-md">
                                                         <div class="form-group">
-                                                            <textarea name="deskripsi" id="deskripsi" class="form-control " cols="30" rows="8"></textarea>
+                                                            <textarea name="deskripsi" id="deskripsi" class="form-control " cols="30" rows="8" placeholder="Masukkan Deskripsi Kamar "></textarea>
                                                         </div>
                                                     </div>
                                             </div>                                            
