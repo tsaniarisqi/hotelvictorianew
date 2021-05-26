@@ -74,7 +74,7 @@
                                               <td align="center"><?php echo $row['tgl_keluar'] ?> </td>
                                               <td align="center"><?php echo $row['lama_menginap'] ?> </td>
                                               <td align="center"><?php echo $row['Tarif'] ?> </td>
-                                              
+                                              <td></td>
                                             </tr>
                                           </tbody>
                                           <?php 

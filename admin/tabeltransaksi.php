@@ -47,6 +47,7 @@
                                           <th>Tanggal Keluar</th>
                                           <th>Lama Menginap</th>
                                           <th>Tarif</th>
+                                          <th>Status</th>
                                           <!-- <th>Aksi</th> -->
                                         </tr>
                                     </thead>
@@ -58,7 +59,7 @@
                                                 $hari_ini=$_POST['hari_ini'];
                                                 $sql= mysqli_query($con, "select * from transaksi where transaksi.tgl_masuk='$hari_ini'");
                                                 }else{
-                                              $sql = mysqli_query($con,"select * from transaksi");
+                                              $sql = mysqli_query($con,"select transaksi.*,konfirmasi.status,transaksi.No_Faktur,transaksi.No_Kamar,transaksi.id_pelanggan,transaksi.tgl_masuk,tgl_keluar,transaksi.lama_menginap,transaksi.Tarif from transaksi INNER JOIN konfirmasi ON konfirmasi.id_pelanggan=transaksi.id_pelanggan");
                                               }
                                               $no=1;
                                               $total=0;
@@ -73,6 +74,7 @@
                                             <td align="center"><?php echo $row['tgl_keluar'] ?> </td>
                                             <td align="center"><?php echo $row['lama_menginap'] ?> </td>
                                             <td align="center"><?php echo $row['Tarif'] ?> </td>
+                                            <td align="center"><?php echo $row['status'] ?> </td>
                                             <td align="center">
                                             <!-- <a href="editkamar.php?module=editkamar.php&No_Kamar=<?php echo $row['No_Kamar'];?>"class="btn btn-success">Edit</a> -->
                                             <!-- <a href="hapustransaksi.php?module=hapustransaksi&No_Faktur=<?php echo $row['No_Faktur'];?>"class="btn btn-danger">Hapus</a> -->
