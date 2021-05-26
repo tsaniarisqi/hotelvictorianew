@@ -35,7 +35,7 @@ include "koneksi.php" ;
 	<?php  
 	include "koneksi.php";
 	$bln_ini = date("Y-m");
-	$sql = mysqli_query($con,"select transaksi.*,kamar.No_Kamar,kamar.Tarif,tamu.Nama from transaksi INNER JOIN kamar ON kamar.No_Kamar=transaksi.No_Kamar INNER JOIN tamu ON tamu.id_pelanggan=transaksi.id_pelanggan and transaksi.tgl_masuk LIKE '%$_GET[bln_ini]%'");
+	$sql = mysqli_query($con,"select transaksi.*,kamar.No_Kamar,kamar.Tarif,pelanggan.Nama from transaksi INNER JOIN kamar ON kamar.No_Kamar=transaksi.No_Kamar INNER JOIN pelanggan ON pelanggan.id_pelanggan=transaksi.id_pelanggan and transaksi.tgl_masuk LIKE '%$_GET[bln_ini]%'");
 	$no=1;
 	$total=0;
 	while($row=mysqli_fetch_array($sql)){

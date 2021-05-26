@@ -1,6 +1,6 @@
 <?php include 'koneksi.php'; ?>
 <?php
-//   if(@$_SESSION['username']!=""){
+   //if(@$_SESSION['username']!=""){
   if(!isset($_GET['konf'])){
 ?>
 <?php include 'head.php';?>
@@ -29,13 +29,15 @@
 						<th>No</th> 
 						<th>ID Konfirmasi</th>
 						<th>ID Pelanggan</th>
+						<th>Nama</th>
 						<th>Bank</th>
 						<th>Total Biaya</th>
 						<th>Aksi</th>
 					</tr>
 			<?php 
 				include 'koneksi.php';
-				$sql= mysqli_query($conn,"select konfirmasi.*,transaksi.Tarif,konfirmasi.id_konfirmasi,konfirmasi.id_pelanggan,konfirmasi.bank from konfirmasi INNER JOIN transaksi ON transaksi.id_pelanggan=konfirmasi.id_pelanggan");
+				
+				$sql= mysqli_query($conn,"select konfirmasi.*,transaksi.Tarif,transaksi.Nama,konfirmasi.id_konfirmasi,konfirmasi.id_pelanggan,konfirmasi.bank from konfirmasi INNER JOIN transaksi ON transaksi.id_pelanggan=konfirmasi.id_pelanggan where konfirmasi.id_pelanggan='$_SESSION[id_pelanggan]' and konfirmasi.status='Y'");
 				$no=1;
 				while($data=mysqli_fetch_array($sql)){
 			?>
@@ -43,6 +45,7 @@
 						<td align="center"><?php echo $no; ?></td>
 						<td align="center"><?php echo $data['id_konfirmasi'] ?> </td>
 						<td align="center"><?php echo $data['id_pelanggan'] ?> </td>
+						<td align="center"><?php echo $data['Nama'] ?> </td>
 						<td align="center"><?php echo $data['bank'] ?> </td>
 						<td align="center"><?php echo $data['Tarif'] ?> </td>
 						<td align="center">
@@ -77,3 +80,4 @@
 		</div>
 	</div>
 </div>
+

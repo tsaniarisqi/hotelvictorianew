@@ -52,7 +52,7 @@
                                         <tr>
                                         <?php  
                                         include "koneksi.php";
-                                        $sql = mysqli_query($con,"select * from konfirmasi order by id_konfirmasi DESC");
+                                        $sql = mysqli_query($con,"select konfirmasi.*,transaksi.Tarif, konfirmasi.id_konfirmasi,konfirmasi.id_pelanggan,konfirmasi.bank,konfirmasi.gambar,konfirmasi.status from konfirmasi INNER JOIN transaksi ON transaksi.id_pelanggan=konfirmasi.id_pelanggan order by id_konfirmasi DESC");
                                         $no=1;
                                         $total=0;
                                         while($row=mysqli_fetch_array($sql)){
@@ -61,7 +61,7 @@
                                             <td align="center"><?php echo $no; ?></td>
                                             <td align="center"><?php echo $row['id_konfirmasi'] ?> </td>
                                             <td align="center"><?php echo $row['id_pelanggan'] ?> </td>
-                                            <td align="center"><?php echo $row['jumlah_transfer'] ?> </td>
+                                            <td align="center"><?php echo $row['Tarif'] ?> </td>
                                             <td align="center"><?php echo $row['bank'] ?> </td>
                                             <td align="center"><?php echo $row['gambar'] ?> </td>
                                             <td align="center"><?php echo $row['status'] ?> </td>

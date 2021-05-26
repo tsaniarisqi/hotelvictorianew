@@ -81,8 +81,6 @@ if (!isset($_GET['konf'])) {
                   <select name="jml_tamu" id="adults" class="form-control">
                     <option value="1">1</option>
                     <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4+</option>
                   </select>
                 </div>
               </div>

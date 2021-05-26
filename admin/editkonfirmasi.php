@@ -1,7 +1,7 @@
 <?php 
 include 'koneksi.php';
 $id=$_GET['id_konfirmasi'];
-$sql= mysqli_query($con,"select * from konfirmasi where id_konfirmasi='$id'");
+$sql= mysqli_query($con,"select konfirmasi.*,transaksi.Tarif, konfirmasi.id_konfirmasi,konfirmasi.id_pelanggan,konfirmasi.bank,konfirmasi.gambar,konfirmasi.status from konfirmasi INNER JOIN transaksi ON transaksi.id_pelanggan=konfirmasi.id_pelanggan  where konfirmasi.id_konfirmasi='$id'");
 $data=mysqli_fetch_array($sql);
 ?>
 <!DOCTYPE html>
@@ -51,7 +51,7 @@ $data=mysqli_fetch_array($sql);
 			<tr style="color: black;">
                 <td>jumlah transfer</td>
                 <td>:</td>
-                <td><input type="text" name="jumlah_transfer" id="" value="<?php echo $data['jumlah_transfer']?>"></td>
+                <td><input type="text" name="jumlah_transfer" id="" value="<?php echo $data['Tarif']?>"></td>
 				</tr>
             <tr style="color: black;">
                 <td>Bank</td>
@@ -81,12 +81,12 @@ $data=mysqli_fetch_array($sql);
     if (isset($_POST['submit'])) {
         $id_konfirmasi = $_POST['id_konfirmasi'];
         $id_pelanggan = $_POST['id_pelanggan'];
-        $jumlah_transfer = $_POST['jumlah_transfer'];
+        
         $bank = $_POST['bank'];
         $status= $_POST['status'];
 
         $q = mysqli_query($con, "UPDATE konfirmasi set id_pelanggan='$_POST[id_pelanggan]',
-            jumlah_transfer='$_POST[jumlah_transfer]',
+            
             bank='$_POST[bank]',
             status='$_POST[status]'
             where id_konfirmasi='$_POST[id_konfirmasi]'");

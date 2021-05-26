@@ -5,30 +5,21 @@
 ?>
 <?php include 'head.php';?>
 <?php include 'header.php';?>
-<!-- <div class="site-blocks-cover overlay" style="background-image: url(images/mercure0.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
-	<div class="container">
-		<div class="row align-items-center justify-content-center">
-			<div class="col-md-7 text-center" data-aos="fade">
-				<span class="caption mb-3">Silahkan Isi melakukan cetak Dibawah ini!!!</span>
-				<h1 class="mb-4">Cetak Pembayaran</h1>
-			</div>
-		</div>
-	</div>
-</div> -->
 <div class="site-section site-section-sm">
 	<div class="container">
 		<div class="row">
 			
-			<div class="col-md-12 col-lg-8 mb-5">
+			<div class="col-md-13 col-lg-9 mb-6">
 				
 				
 				
 				<form enctype="multipart/form-data" action="" method="post" class="p-5 bg-white">
-					<table width="100%" border="1" class="table table-bordered table-striped">
+					<table width="90%" border="1" class="table table-bordered table-striped">
 						<tr>
 						<th>No</th> 
 						<th>No Faktur</th> 
 						<th>Id Pelanggan</th> 
+						<th>Nama</th> 
 						<th>No Kamar</th>
 						<th>Lama Menginap</th>
 						<th>Total Biaya</th>
@@ -44,6 +35,7 @@
 						<td align="center"><?php echo $no; ?></td>
 						<td align="center"><?php echo $data['No_Faktur'] ?></td>
 						<td align="center"><?php echo $data['id_pelanggan'] ?> </td>
+						<td align="center"><?php echo $data['Nama'] ?> </td>
 						<td align="center"><?php echo $data['No_Kamar'] ?> </td>
 						<td align="center"><?php echo $data['lama_menginap'] ?> </td>
 						<td align="center"><?php echo $data['Tarif'] ?> </td>
@@ -63,7 +55,7 @@
 					
 				</form>
 			</div>
-			<div class="col-lg-4">
+			<div class="col-lg-2">
 				<div class="p-4 mb-3 bg-white">
 					<h3 class="h5 text-black mb-3">Contact Info</h3>
 					<p class="mb-0 font-weight-bold">Address</p>
