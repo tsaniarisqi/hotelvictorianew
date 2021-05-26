@@ -35,7 +35,7 @@
                         <div class="card-body">
                             <h4 class="card-title">Data Kamar</h4>
                             <div class="table-responsive">
-                                <table id="zero_config" class="table table-striped table-bordered no-wrap">
+                                <table id="zero_config" class="table table-striped table-bordered wrap">
                                     <thead>
                                         <tr> 
                                             <th>No</th>
@@ -43,8 +43,8 @@
                                             <th>Nama Kamar</th>
                                             <th>Type Bed</th>
                                             <th>Tarif</th>
-                                            <th>Aksi</th>
                                             <th>Deskripsi</th>
+                                            <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>

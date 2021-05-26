@@ -59,10 +59,11 @@
                                             ?>
                                         </h2>
                                     </div>
-                                    <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">Kamar</h6>
+                                    <a href="tabelKamar.php"><h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">Kamar</h6></a>
                                 </div>
                                 <div class="ml-auto mt-md-3 mt-lg-0">
-                                    <span class="opacity-7 text-muted"><i class="fa fa-hotel" style="font-size:36px"></i></span>
+                                <a href="tabelkamar.php">
+                                    <span class="opacity-7 text-muted"><i class="fa fa-hotel" style="font-size:36px"></i></span></a>
                                 </div>
                             </div>
                         </div>
@@ -78,10 +79,11 @@
                                                 echo $data['total']; 
                                             ?>
                                     </h2>
-                                    <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">Transaksi</h6>
+                                    <a href="tabeltransaksi.php"><h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">Transaksi</h6></a>
                                 </div>
                                 <div class="ml-auto mt-md-3 mt-lg-0">
-                                    <span class="opacity-7 text-muted"><i class='fas fa-clipboard' style="font-size:36px"></i></span>
+                                <a href="tabeltransaksi.php">
+                                    <span class="opacity-7 text-muted"><i class='fas fa-clipboard' style="font-size:36px"></i></span></a>
                                 </div>
                             </div>
                         </div>
@@ -99,10 +101,12 @@
                                             ?>
                                         </h2>
                                     </div>
-                                    <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">Customer</h6>
+                                    <a href="tabeltamu.php">
+                                    <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">Customer</h6></a>
                                 </div>
                                 <div class="ml-auto mt-md-3 mt-lg-0">
-                                    <span class="opacity-7 text-muted"><i class='fa fa-user' style='font-size:36px'></i></span>
+                                <a href="tabeltamu.php">
+                                    <span class="opacity-7 text-muted"><i class='fa fa-user' style='font-size:36px'></i></span></a>
                                 </div>
                             </div>
                         </div>
@@ -118,10 +122,12 @@
                                                 echo $data['total']; 
                                             ?>
                                     </h2>
-                                    <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">Pendapatan</h6>
+                                    <a href="tabeltransaksi.php">
+                                    <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">Pendapatan</h6></a>
                                 </div>
                                 <div class="ml-auto mt-md-3 mt-lg-0">
-                                    <span class="opacity-7 text-muted"><i class='fas fa-money-check-alt' style="font-size:36px"></i></span>
+                                <a href="tabeltransaksi.php">
+                                    <span class="opacity-7 text-muted"><i class='fas fa-money-check-alt' style="font-size:36px"></i></span></a>
                                 </div>
                             </div>
                         </div>
