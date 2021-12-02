@@ -1,7 +1,7 @@
 <?php
 
 $server = 'localhost';
-$user = 'root';
+$user = 'root'; 
 $password = '';
 $db = 'hotel';
 
